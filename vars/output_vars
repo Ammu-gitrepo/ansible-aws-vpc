@@ -7,6 +7,9 @@ privsub2id: subnet-0652f1490336d21c0
 privsub3id: subnet-0f7fd09a729284f34
 igwid: igw-0dc3b2b236aa6a2cc
 PubRTid: rtb-08c4a5028adf1c6b4
+<<<<<<< HEAD
  PubRTid: rtb-08c4a5028adf1c6b4
+=======
+>>>>>>> 83e6f743ccd5800f742ff188bd497f1fb0ce485d
 NATGWid: nat-0788896c044e60d55
  PrivRTid: rtb-0785b32d37b70b80b
