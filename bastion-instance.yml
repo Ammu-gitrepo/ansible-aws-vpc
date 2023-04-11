@@ -1,0 +1,11 @@
+---
+- name: Setup Vprofile bastion host
+  hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - name: Import VPC setup variable
+      include_vars: vars/bastion_setup
+
+    - name: Import output variable
+      include_vars: vars/output_vars
