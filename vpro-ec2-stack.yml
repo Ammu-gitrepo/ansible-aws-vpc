@@ -53,7 +53,7 @@
             from_port: 22
             to_port: 22
             group_id: "{{BastionSG_out}}"
-        register: vproStacksg_out  
+      register: vproStacksg_out  
 
     - name: Update security group for vpro-ec2 instance
       ec2_group:
