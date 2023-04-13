@@ -34,7 +34,7 @@
             from_port: 80 
             to_port: 80
             cidr_ip: 0.0.0.0/0
-      register: vproELB-sg_out
+      register: vproELBsg_out
 
     - name: Create security group for vpro-ec2 instance
       ec2_group:
@@ -47,13 +47,13 @@
           - proto: tcp
             from_port: 80
             to_port: 80
-            group_id: "{{vproELB-sg_out.group_id}}"
+            group_id: "{{vproELBsg_out.group_id}}"
 
           - proto: tcp
             from_port: 22
             to_port: 22
             group_id: "{{BastionSG_out}}"
-        register: vproStack-sg_out  
+        register: vproStacksg_out  
 
     - name: Update security group for vpro-ec2 instance
       ec2_group:
@@ -64,7 +64,7 @@
         purge_rules: no
         rules:
           - proto: all
-            group_id: "{{vproStack-sg_out.group_id}}"
+            group_id: "{{vproStacksg_out.group_id}}"
   
 
 
