@@ -1,0 +1,406 @@
+2023-04-15 15:04:57,381 p=1599 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifacts & sql file to files directory] ****************************************************************
+2023-04-15 15:04:57,426 p=1599 u=ubuntu n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2023-04-15 15:04:58,892 p=1599 u=ubuntu n=ansible | ok: [localhost]
+2023-04-15 15:04:58,907 p=1599 u=ubuntu n=ansible | TASK [Install jdk, maven, git] ********************************************************************************************************
+2023-04-15 15:05:13,747 p=1599 u=ubuntu n=ansible | ok: [localhost] => (item=git)
+2023-04-15 15:05:56,285 p=1599 u=ubuntu n=ansible | changed: [localhost] => (item=openjdk-8-jdk)
+2023-04-15 15:06:07,070 p=1599 u=ubuntu n=ansible | changed: [localhost] => (item=maven)
+2023-04-15 15:06:07,085 p=1599 u=ubuntu n=ansible | TASK [Clone source code from github] **************************************************************************************************
+2023-04-15 15:06:12,531 p=1599 u=ubuntu n=ansible | changed: [localhost]
+2023-04-15 15:06:12,540 p=1599 u=ubuntu n=ansible | TASK [mvn install command to build artifact] ******************************************************************************************
+2023-04-15 15:06:53,043 p=1599 u=ubuntu n=ansible | changed: [localhost]
+2023-04-15 15:06:53,081 p=1599 u=ubuntu n=ansible | TASK [Copies artifacts to files directory] ********************************************************************************************
+2023-04-15 15:06:54,436 p=1599 u=ubuntu n=ansible | changed: [localhost] => (item=/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2023-04-15 15:06:54,446 p=1599 u=ubuntu n=ansible | TASK [Copy sql file to files directory] ***********************************************************************************************
+2023-04-15 15:06:54,878 p=1599 u=ubuntu n=ansible | changed: [localhost]
+2023-04-15 15:06:54,894 p=1599 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************
+2023-04-15 15:06:54,894 p=1599 u=ubuntu n=ansible | localhost                  : ok=6    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:23:21,928 p=6802 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifacts & sql file to files directory] ****************************************************************
+2023-04-15 15:23:21,956 p=6802 u=ubuntu n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2023-04-15 15:23:23,442 p=6802 u=ubuntu n=ansible | ok: [localhost]
+2023-04-15 15:23:23,458 p=6802 u=ubuntu n=ansible | TASK [Install jdk, maven, git] ********************************************************************************************************
+2023-04-15 15:23:26,224 p=6802 u=ubuntu n=ansible | ok: [localhost] => (item=git)
+2023-04-15 15:23:28,669 p=6802 u=ubuntu n=ansible | ok: [localhost] => (item=openjdk-8-jdk)
+2023-04-15 15:23:31,056 p=6802 u=ubuntu n=ansible | ok: [localhost] => (item=maven)
+2023-04-15 15:23:31,068 p=6802 u=ubuntu n=ansible | TASK [Clone source code from github] **************************************************************************************************
+2023-04-15 15:23:31,873 p=6802 u=ubuntu n=ansible | ok: [localhost]
+2023-04-15 15:23:31,884 p=6802 u=ubuntu n=ansible | TASK [mvn install command to build artifact] ******************************************************************************************
+2023-04-15 15:23:31,897 p=6802 u=ubuntu n=ansible | skipping: [localhost]
+2023-04-15 15:23:31,907 p=6802 u=ubuntu n=ansible | TASK [Copies artifacts to files directory] ********************************************************************************************
+2023-04-15 15:23:32,851 p=6802 u=ubuntu n=ansible | ok: [localhost] => (item=/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war)
+2023-04-15 15:23:32,861 p=6802 u=ubuntu n=ansible | TASK [Copy sql file to files directory] ***********************************************************************************************
+2023-04-15 15:23:33,319 p=6802 u=ubuntu n=ansible | ok: [localhost]
+2023-04-15 15:23:33,335 p=6802 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************
+2023-04-15 15:23:33,335 p=6802 u=ubuntu n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-04-15 15:31:54,343 p=8261 u=ubuntu n=ansible | ansible-playbook [core 2.13.8]
+  config file = /home/ubuntu/ansible-aws-vpc/provision-stack/ansible.cfg
+  configured module search path = ['/home/ubuntu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/local/lib/python3.8/dist-packages/ansible
+  ansible collection location = /home/ubuntu/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 3.8.10 (default, Mar 13 2023, 10:26:41) [GCC 9.4.0]
+  jinja version = 3.1.2
+  libyaml = True
+2023-04-15 15:31:54,343 p=8261 u=ubuntu n=ansible | Using /home/ubuntu/ansible-aws-vpc/provision-stack/ansible.cfg as config file
+2023-04-15 15:31:54,349 p=8261 u=ubuntu n=ansible | host_list declined parsing /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as it did not pass its verify_file() method
+2023-04-15 15:31:54,349 p=8261 u=ubuntu n=ansible | script declined parsing /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as it did not pass its verify_file() method
+2023-04-15 15:31:54,350 p=8261 u=ubuntu n=ansible | auto declined parsing /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro as it did not pass its verify_file() method
+2023-04-15 15:31:54,353 p=8261 u=ubuntu n=ansible | Parsed /home/ubuntu/ansible-aws-vpc/provision-stack/inventory-vpro inventory source with ini plugin
+2023-04-15 15:31:54,519 p=8261 u=ubuntu n=ansible | Skipping callback 'default', as we already have a stdout callback.
+2023-04-15 15:31:54,519 p=8261 u=ubuntu n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2023-04-15 15:31:54,519 p=8261 u=ubuntu n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2023-04-15 15:31:54,520 p=8261 u=ubuntu n=ansible | PLAYBOOK: build.yml *******************************************************************************************************************
+2023-04-15 15:31:54,520 p=8261 u=ubuntu n=ansible | 1 plays in build.yml
+2023-04-15 15:31:54,521 p=8261 u=ubuntu n=ansible | PLAY [Generate artifact, copy artifacts & sql file to files directory] ****************************************************************
+2023-04-15 15:31:54,530 p=8261 u=ubuntu n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2023-04-15 15:31:54,541 p=8266 u=ubuntu n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ubuntu
+2023-04-15 15:31:54,542 p=8266 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:31:54,548 p=8266 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051 `" && echo ansible-tmp-1681572714.547569-8266-40551310605051="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051 `" ) && sleep 0'
+2023-04-15 15:31:54,825 p=8266 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/setup.py
+2023-04-15 15:31:54,826 p=8266 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmp45dszhkz TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051/AnsiballZ_setup.py
+2023-04-15 15:31:54,828 p=8266 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051/AnsiballZ_setup.py && sleep 0'
+2023-04-15 15:31:54,834 p=8266 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-icngsuxrxvbthpukuqdxwnjvjlgwruzx ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051/AnsiballZ_setup.py'"'"' && sleep 0'
+2023-04-15 15:31:55,730 p=8266 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572714.547569-8266-40551310605051/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:31:55,753 p=8261 u=ubuntu n=ansible | ok: [localhost]
+2023-04-15 15:31:55,763 p=8261 u=ubuntu n=ansible | META: ran handlers
+2023-04-15 15:31:55,769 p=8261 u=ubuntu n=ansible | TASK [Install jdk, maven, git] ********************************************************************************************************
+2023-04-15 15:31:55,785 p=8341 u=ubuntu n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ubuntu
+2023-04-15 15:31:55,786 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:31:55,792 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710 `" && echo ansible-tmp-1681572715.792092-8341-102986490712710="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710 `" ) && sleep 0'
+2023-04-15 15:31:55,973 p=8341 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/apt.py
+2023-04-15 15:31:55,974 p=8341 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmp9353ihgo TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710/AnsiballZ_apt.py
+2023-04-15 15:31:55,974 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710/AnsiballZ_apt.py && sleep 0'
+2023-04-15 15:31:55,982 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bzncppjespyswdnceijxiwcimtffsltp ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710/AnsiballZ_apt.py'"'"' && sleep 0'
+2023-04-15 15:31:58,434 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572715.792092-8341-102986490712710/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:31:58,449 p=8261 u=ubuntu n=ansible | ok: [localhost] => (item=git) => {
+    "ansible_loop_var": "item",
+    "cache_update_time": 1681572717,
+    "cache_updated": true,
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_change_held_packages": false,
+            "allow_downgrade": false,
+            "allow_unauthenticated": false,
+            "autoclean": false,
+            "autoremove": false,
+            "cache_valid_time": 0,
+            "clean": false,
+            "deb": null,
+            "default_release": null,
+            "dpkg_options": "force-confdef,force-confold",
+            "fail_on_autoremove": false,
+            "force": false,
+            "force_apt_get": false,
+            "install_recommends": null,
+            "lock_timeout": 60,
+            "name": "git",
+            "only_upgrade": false,
+            "package": [
+                "git"
+            ],
+            "policy_rc_d": null,
+            "purge": false,
+            "state": "present",
+            "update_cache": true,
+            "update_cache_retries": 5,
+            "update_cache_retry_max_delay": 12,
+            "upgrade": null
+        }
+    },
+    "item": "git"
+}
+2023-04-15 15:31:58,449 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:31:58,455 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826 `" && echo ansible-tmp-1681572718.4550705-8341-162096601634826="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826 `" ) && sleep 0'
+2023-04-15 15:31:58,464 p=8341 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/apt.py
+2023-04-15 15:31:58,465 p=8341 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmpampftia2 TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826/AnsiballZ_apt.py
+2023-04-15 15:31:58,466 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826/AnsiballZ_apt.py && sleep 0'
+2023-04-15 15:31:58,471 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bdlfsoifowyqxamfcivmtvidfvyzftqn ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826/AnsiballZ_apt.py'"'"' && sleep 0'
+2023-04-15 15:32:00,894 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572718.4550705-8341-162096601634826/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:32:00,907 p=8261 u=ubuntu n=ansible | ok: [localhost] => (item=openjdk-8-jdk) => {
+    "ansible_loop_var": "item",
+    "cache_update_time": 1681572719,
+    "cache_updated": true,
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_change_held_packages": false,
+            "allow_downgrade": false,
+            "allow_unauthenticated": false,
+            "autoclean": false,
+            "autoremove": false,
+            "cache_valid_time": 0,
+            "clean": false,
+            "deb": null,
+            "default_release": null,
+            "dpkg_options": "force-confdef,force-confold",
+            "fail_on_autoremove": false,
+            "force": false,
+            "force_apt_get": false,
+            "install_recommends": null,
+            "lock_timeout": 60,
+            "name": "openjdk-8-jdk",
+            "only_upgrade": false,
+            "package": [
+                "openjdk-8-jdk"
+            ],
+            "policy_rc_d": null,
+            "purge": false,
+            "state": "present",
+            "update_cache": true,
+            "update_cache_retries": 5,
+            "update_cache_retry_max_delay": 12,
+            "upgrade": null
+        }
+    },
+    "item": "openjdk-8-jdk"
+}
+2023-04-15 15:32:00,909 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:32:00,914 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636 `" && echo ansible-tmp-1681572720.9141243-8341-43263594943636="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636 `" ) && sleep 0'
+2023-04-15 15:32:00,923 p=8341 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/apt.py
+2023-04-15 15:32:00,924 p=8341 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmpb0ol4l2f TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636/AnsiballZ_apt.py
+2023-04-15 15:32:00,925 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636/AnsiballZ_apt.py && sleep 0'
+2023-04-15 15:32:00,931 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ypwgygpdhogiffoxqosmuuzbnkamtjdf ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636/AnsiballZ_apt.py'"'"' && sleep 0'
+2023-04-15 15:32:03,385 p=8341 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572720.9141243-8341-43263594943636/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:32:03,396 p=8261 u=ubuntu n=ansible | ok: [localhost] => (item=maven) => {
+    "ansible_loop_var": "item",
+    "cache_update_time": 1681572722,
+    "cache_updated": true,
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_change_held_packages": false,
+            "allow_downgrade": false,
+            "allow_unauthenticated": false,
+            "autoclean": false,
+            "autoremove": false,
+            "cache_valid_time": 0,
+            "clean": false,
+            "deb": null,
+            "default_release": null,
+            "dpkg_options": "force-confdef,force-confold",
+            "fail_on_autoremove": false,
+            "force": false,
+            "force_apt_get": false,
+            "install_recommends": null,
+            "lock_timeout": 60,
+            "name": "maven",
+            "only_upgrade": false,
+            "package": [
+                "maven"
+            ],
+            "policy_rc_d": null,
+            "purge": false,
+            "state": "present",
+            "update_cache": true,
+            "update_cache_retries": 5,
+            "update_cache_retry_max_delay": 12,
+            "upgrade": null
+        }
+    },
+    "item": "maven"
+}
+2023-04-15 15:32:03,408 p=8261 u=ubuntu n=ansible | TASK [Clone source code from github] **************************************************************************************************
+2023-04-15 15:32:03,419 p=9551 u=ubuntu n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ubuntu
+2023-04-15 15:32:03,420 p=9551 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:32:03,426 p=9551 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803 `" && echo ansible-tmp-1681572723.4258506-9551-47966585929803="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803 `" ) && sleep 0'
+2023-04-15 15:32:03,585 p=9551 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/git.py
+2023-04-15 15:32:03,586 p=9551 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmp053_h9uy TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803/AnsiballZ_git.py
+2023-04-15 15:32:03,586 p=9551 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803/AnsiballZ_git.py && sleep 0'
+2023-04-15 15:32:03,593 p=9551 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ofdswzdlahqtgicekjcilgqwytjvqokt ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803/AnsiballZ_git.py'"'"' && sleep 0'
+2023-04-15 15:32:04,056 p=9551 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572723.4258506-9551-47966585929803/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:32:04,066 p=8261 u=ubuntu n=ansible | ok: [localhost] => {
+    "after": "f65b59ede39da2cc9d1d94c4ba80b0a823511c49",
+    "before": "f65b59ede39da2cc9d1d94c4ba80b0a823511c49",
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "accept_hostkey": false,
+            "accept_newhostkey": false,
+            "archive": null,
+            "archive_prefix": null,
+            "bare": false,
+            "clone": true,
+            "depth": null,
+            "dest": "./Vprofile-repo",
+            "executable": null,
+            "force": false,
+            "gpg_whitelist": [],
+            "key_file": null,
+            "recursive": true,
+            "reference": null,
+            "refspec": null,
+            "remote": "origin",
+            "repo": "https://github.com/devopshydclub/vprofile-project.git",
+            "separate_git_dir": null,
+            "single_branch": false,
+            "ssh_opts": null,
+            "track_submodules": false,
+            "umask": null,
+            "update": true,
+            "verify_commit": false,
+            "version": "vp-rem"
+        }
+    },
+    "remote_url_changed": false
+}
+2023-04-15 15:32:04,075 p=8261 u=ubuntu n=ansible | TASK [mvn install command to build artifact] ******************************************************************************************
+2023-04-15 15:32:04,089 p=8261 u=ubuntu n=ansible | skipping: [localhost] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+2023-04-15 15:32:04,099 p=8261 u=ubuntu n=ansible | TASK [Copies artifacts to files directory] ********************************************************************************************
+2023-04-15 15:32:04,115 p=9602 u=ubuntu n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ubuntu
+2023-04-15 15:32:04,115 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:32:04,121 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994 `" && echo ansible-tmp-1681572724.121275-9602-38537981788994="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994 `" ) && sleep 0'
+2023-04-15 15:32:04,246 p=9602 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/stat.py
+2023-04-15 15:32:04,246 p=9602 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmpo0trtpi_ TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_stat.py
+2023-04-15 15:32:04,247 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_stat.py && sleep 0'
+2023-04-15 15:32:04,255 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-jljfmrbliahtgoyugxdpgfxjrxumtpxl ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_stat.py'"'"' && sleep 0'
+2023-04-15 15:32:04,764 p=9602 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/file.py
+2023-04-15 15:32:04,765 p=9602 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmpiyx15o8q TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_file.py
+2023-04-15 15:32:04,766 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_file.py && sleep 0'
+2023-04-15 15:32:04,773 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-bsiqdktkgrhoxyjfwvilyhhfylvgtvyh ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/AnsiballZ_file.py'"'"' && sleep 0'
+2023-04-15 15:32:04,966 p=9602 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572724.121275-9602-38537981788994/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:32:04,978 p=8261 u=ubuntu n=ansible | ok: [localhost] => (item=/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war) => {
+    "ansible_loop_var": "item",
+    "changed": false,
+    "checksum": "6a9e71e832ed65b0577ca15e2f7a21420d313414",
+    "dest": "files/ROOT.war",
+    "diff": {
+        "after": {
+            "path": "files/ROOT.war"
+        },
+        "before": {
+            "path": "files/ROOT.war"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "vprofile-v2.war",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "files/ROOT.war",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "files/ROOT.war",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "item": "/home/ubuntu/ansible-aws-vpc/provision-stack/Vprofile-repo/target/vprofile-v2.war",
+    "mode": "0644",
+    "owner": "root",
+    "path": "files/ROOT.war",
+    "size": 48450684,
+    "state": "file",
+    "uid": 0
+}
+2023-04-15 15:32:04,988 p=8261 u=ubuntu n=ansible | TASK [Copy sql file to files directory] ***********************************************************************************************
+2023-04-15 15:32:04,999 p=9644 u=ubuntu n=ansible | <127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: ubuntu
+2023-04-15 15:32:04,999 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'echo ~ubuntu && sleep 0'
+2023-04-15 15:32:05,005 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /home/ubuntu/.ansible/tmp `"&& mkdir "` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527 `" && echo ansible-tmp-1681572725.0052617-9644-111525971165527="` echo /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527 `" ) && sleep 0'
+2023-04-15 15:32:05,017 p=9644 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/stat.py
+2023-04-15 15:32:05,018 p=9644 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmp4qffmt7v TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_stat.py
+2023-04-15 15:32:05,019 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_stat.py && sleep 0'
+2023-04-15 15:32:05,025 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-ajwfkblsaqbnwjppjmykmuuxpppfbbwi ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_stat.py'"'"' && sleep 0'
+2023-04-15 15:32:05,229 p=9644 u=ubuntu n=ansible | Using module file /usr/local/lib/python3.8/dist-packages/ansible/modules/file.py
+2023-04-15 15:32:05,230 p=9644 u=ubuntu n=ansible | <127.0.0.1> PUT /home/ubuntu/.ansible/tmp/ansible-local-8261byw48mgr/tmpwy5wngpl TO /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_file.py
+2023-04-15 15:32:05,231 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'chmod u+x /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/ /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_file.py && sleep 0'
+2023-04-15 15:32:05,237 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'sudo -H -S -n  -u root /bin/sh -c '"'"'echo BECOME-SUCCESS-rwdjbttwbsxcuwehpjiuddimhpdehuzs ; /usr/bin/python3 /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/AnsiballZ_file.py'"'"' && sleep 0'
+2023-04-15 15:32:05,433 p=9644 u=ubuntu n=ansible | <127.0.0.1> EXEC /bin/sh -c 'rm -f -r /home/ubuntu/.ansible/tmp/ansible-tmp-1681572725.0052617-9644-111525971165527/ > /dev/null 2>&1 && sleep 0'
+2023-04-15 15:32:05,444 p=8261 u=ubuntu n=ansible | ok: [localhost] => {
+    "changed": false,
+    "checksum": "cdad627ef9f56b87f516776ff154ff77d65741db",
+    "dest": "files/db_backup.sql",
+    "diff": {
+        "after": {
+            "path": "files/db_backup.sql"
+        },
+        "before": {
+            "path": "files/db_backup.sql"
+        }
+    },
+    "gid": 0,
+    "group": "root",
+    "invocation": {
+        "module_args": {
+            "_diff_peek": null,
+            "_original_basename": "db_backup.sql",
+            "access_time": null,
+            "access_time_format": "%Y%m%d%H%M.%S",
+            "attributes": null,
+            "dest": "files/db_backup.sql",
+            "follow": true,
+            "force": false,
+            "group": null,
+            "mode": null,
+            "modification_time": null,
+            "modification_time_format": "%Y%m%d%H%M.%S",
+            "owner": null,
+            "path": "files/db_backup.sql",
+            "recurse": false,
+            "selevel": null,
+            "serole": null,
+            "setype": null,
+            "seuser": null,
+            "src": null,
+            "state": "file",
+            "unsafe_writes": false
+        }
+    },
+    "mode": "0644",
+    "owner": "root",
+    "path": "files/db_backup.sql",
+    "size": 6176,
+    "state": "file",
+    "uid": 0
+}
+2023-04-15 15:32:05,453 p=8261 u=ubuntu n=ansible | META: ran handlers
+2023-04-15 15:32:05,459 p=8261 u=ubuntu n=ansible | META: ran handlers
+2023-04-15 15:32:05,460 p=8261 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************
+2023-04-15 15:32:05,460 p=8261 u=ubuntu n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2023-04-15 15:44:01,133 p=9732 u=ubuntu n=ansible | PLAY [Set host to ip mapping in /etc/hosts file of all the instance in the stack] *****************************************************
+2023-04-15 15:44:01,142 p=9732 u=ubuntu n=ansible | TASK [Gathering Facts] ****************************************************************************************************************
+2023-04-15 15:44:03,084 p=9732 u=ubuntu n=ansible | ok: [cntl]
+2023-04-15 15:44:03,322 p=9732 u=ubuntu n=ansible | ok: [web01]
+2023-04-15 15:44:03,655 p=9732 u=ubuntu n=ansible | ok: [rmq01]
+2023-04-15 15:44:03,936 p=9732 u=ubuntu n=ansible | ok: [mc01]
+2023-04-15 15:44:04,214 p=9732 u=ubuntu n=ansible | ok: [app01]
+2023-04-15 15:44:06,121 p=9732 u=ubuntu n=ansible | ok: [db01]
+2023-04-15 15:44:06,138 p=9732 u=ubuntu n=ansible | TASK [Import vpc setup variable] ******************************************************************************************************
+2023-04-15 15:44:06,188 p=9732 u=ubuntu n=ansible | ok: [cntl]
+2023-04-15 15:44:06,213 p=9732 u=ubuntu n=ansible | ok: [web01]
+2023-04-15 15:44:06,230 p=9732 u=ubuntu n=ansible | ok: [app01]
+2023-04-15 15:44:06,253 p=9732 u=ubuntu n=ansible | ok: [rmq01]
+2023-04-15 15:44:06,257 p=9732 u=ubuntu n=ansible | ok: [mc01]
+2023-04-15 15:44:06,265 p=9732 u=ubuntu n=ansible | ok: [db01]
+2023-04-15 15:44:06,274 p=9732 u=ubuntu n=ansible | TASK [Update hosts file for all the Hosts] ********************************************************************************************
+2023-04-15 15:44:07,085 p=9732 u=ubuntu n=ansible | changed: [web01]
+2023-04-15 15:44:07,089 p=9732 u=ubuntu n=ansible | changed: [rmq01]
+2023-04-15 15:44:07,089 p=9732 u=ubuntu n=ansible | changed: [mc01]
+2023-04-15 15:44:07,090 p=9732 u=ubuntu n=ansible | changed: [app01]
+2023-04-15 15:44:07,159 p=9732 u=ubuntu n=ansible | changed: [cntl]
+2023-04-15 15:44:07,403 p=9732 u=ubuntu n=ansible | changed: [db01]
+2023-04-15 15:44:07,421 p=9732 u=ubuntu n=ansible | PLAY RECAP ****************************************************************************************************************************
+2023-04-15 15:44:07,421 p=9732 u=ubuntu n=ansible | app01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:44:07,422 p=9732 u=ubuntu n=ansible | cntl                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:44:07,422 p=9732 u=ubuntu n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:44:07,422 p=9732 u=ubuntu n=ansible | mc01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:44:07,423 p=9732 u=ubuntu n=ansible | rmq01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-04-15 15:44:07,423 p=9732 u=ubuntu n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
