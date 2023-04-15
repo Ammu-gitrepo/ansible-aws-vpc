@@ -5,21 +5,21 @@
   gather_facts: False
   tasks:
     - name: Import VPC setup variable
-      include_vars: vars/bastion_setup
+      include_vars: vars/vpc_setup
 
     - name: Import output variable
       include_vars: vars/output_vars
 
     - name: Create vprofile ec2 key
       ec2_key:
-        name: vprofile-key
+        name: vprofile-key1
         region: "{{region}}"
       register: key_out
 
     - name: Save the key into file bastion-key.pem
       copy:
         content: "{{key_out.key.private_key}}"
-        dest: ./bastion-key.pem"
+        dest: "./bastion-key.pem"
         mode: 0600
       when: key_out.changed
 
@@ -56,3 +56,11 @@
         group_id: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
       register: BastionHost_out
+
+    - name: Insert/Update "BastionSGid" to vpc output variable file
+      blockinfile:
+        path: vars/vpc_output_vars
+        backup: yes
+        block: |
+          BastionSG_out: {{BastionSG_out.group_id}}
+
