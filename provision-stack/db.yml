@@ -24,7 +24,7 @@
         name: mysql
         state: started
         enabled: yes
-        tags:
+      tags:
          - svc
 
     - name: creating mysql user
