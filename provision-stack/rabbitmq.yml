@@ -38,6 +38,9 @@
       tags:
         - package
 
+    - name: Execute the command in remote shell; stdout goes to the specified file on the remote
+      ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.deb.sh | sudo bash    
+
     - name: Install Rabbit MQ
       apt:
         name: rabbitmq-server
